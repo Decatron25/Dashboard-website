@@ -41,12 +41,13 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-install": "^1.1.0",
+    "gulp-open": "^3.0.1",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-open": "^3.0.1"
+    "gulp-sourcemaps": "^2.6.4"
   },
   "homepage": "http://demos.creative-tim.com/material-dashboard-dark/examples/dashboard.html",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9"
   }
 }
