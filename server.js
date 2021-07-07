@@ -18,7 +18,9 @@ app.get("/cctv3.html", function(req, res) {
 app.get("/cctv4.html", function(req, res) {
   res.sendFile(__dirname + "/examples/cctv4.html");
 });
-
+app.get("/facemask.html", (req,res) => {
+  res.sendFile(__dirname + "/examples/facemask.html");
+})
 app.listen(3000, function() {
   console.log("server running at port 3000");
 });
