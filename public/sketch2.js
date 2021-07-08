@@ -35,6 +35,8 @@ function gotDetections(error, results) {
       persons.push(results[i]);
   }
 
+  
+
   detector.detect(video, gotDetections);
 }
 

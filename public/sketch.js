@@ -6,7 +6,7 @@ let persons = [];
 
 function preload() {
   detector = ml5.objectDetector('cocossd');
-   video = createVideo('loki-resized.mp4');
+  video = createVideo('loki-resized.mp4');
 }
 
 
@@ -43,8 +43,7 @@ function gotDetections(error, results) {
 function draw() {
   image(video.get(), 0, 0);
 
-
-
+  let redboxes = 0;
   for (let i = 0; i < persons.length; i++) {
 
     var isRed = false;
@@ -53,7 +52,7 @@ function draw() {
     let y1 = persons[i].y + persons[i].height / 2;
     for (let j = 0; j < persons.length; j++) {
 
-      if(i == j)
+      if (i == j)
         continue;
 
       let x2 = persons[j].x + persons[j].width / 2;
@@ -62,7 +61,7 @@ function draw() {
 
       let d = dist(x1, y1, x2, y2);
 
-      if(d < ((persons[i].width + persons[j].width) / 2) + 20) {
+      if (d < ((persons[i].width + persons[j].width) / 2) + 20) {
         isRed = true;
         stroke(255, 0, 0, 80);
         line(x1, y1, x2, y2);
@@ -73,14 +72,31 @@ function draw() {
     strokeWeight(3);
     noFill();
 
-    if(isRed) {
+    if (isRed) {
+      redboxes++;
       stroke(255, 0, 0);
-    }
-    else {
+    } else {
       stroke(0, 255, 0);
     }
 
-    rect(persons[i].x, persons[i].y ,persons[i].width, persons[i].height);
+    rect(persons[i].x, persons[i].y, persons[i].width, persons[i].height);
 
   }
+
+  fetch('/cctv1.html', {
+      method: 'POST',
+      body: JSON.stringify({
+        count: persons.length,
+        violations: redboxes,
+      }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        console.log(persons.length);
+      }
+    });
 }
