@@ -12,38 +12,12 @@ canvas {
   margin-top: 100px;
 
 }
-#video2 {
-  margin-top: 100px;
-  margin-left:10px;
-}
-input[type = submit]{
-  background: #0066A2;
-   color: white;
-   border-style: outset;
-   border-color: #0066A2;
-   height: 50px;
-   width: 100px;
-   font: bold 15px arial, sans-serif;
-   text-shadow:none;
-   margin: 50px;
-    margin-right: 240px;
 
-}
-.submit-image{
-    margin: auto;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content : center;
-    align-items : center;
-    flex-direction : column;
-
-}
-img{
-  width: 50%;
-  height: auto;
-}
 h1{
   margin-right: 200px;
+}
+#mask-image{
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 100px;
 }

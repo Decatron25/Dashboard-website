@@ -12,7 +12,7 @@ function preload() {
 
 function setup() {
 
-  let canvas = createCanvas(854, 480);
+  let canvas = createCanvas(854,480);
   canvas.parent('video1');
   background(128, 0, 128);
   video.volume(0);
