@@ -96,7 +96,7 @@ function draw() {
     })
     .then(function(response) {
       if (response.ok) {
-        console.log(persons.length);
+        //console.log(persons.length);
       }
     });
 }

@@ -35,7 +35,7 @@ function gotDetections(error, results) {
       persons.push(results[i]);
   }
 
-  
+
 
   detector.detect(video, gotDetections);
 }
@@ -45,7 +45,7 @@ function gotDetections(error, results) {
 function draw() {
   image(video.get(), 0, 0);
 
-
+  let redboxes = 0;
 
   for (let i = 0; i < persons.length; i++) {
 
@@ -76,6 +76,7 @@ function draw() {
     noFill();
 
     if(isRed) {
+      redboxes++;
       stroke(255, 0, 0);
     }
     else {
@@ -85,4 +86,21 @@ function draw() {
     rect(persons[i].x, persons[i].y ,persons[i].width, persons[i].height);
 
   }
+
+  fetch('/cctv2.html', {
+      method: 'POST',
+      body: JSON.stringify({
+        count: persons.length,
+        violations: redboxes,
+      }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        //console.log(persons.length);
+      }
+    });
 }

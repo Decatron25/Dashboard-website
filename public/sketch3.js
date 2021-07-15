@@ -83,7 +83,7 @@ function draw() {
 
   }
 
-  fetch('/cctv1.html', {
+  fetch('/cctv3.html', {
       method: 'POST',
       body: JSON.stringify({
         count: persons.length,
