@@ -34,13 +34,12 @@ function gotDetections(error, results) {
     if (results[i].label == "person")
       persons.push(results[i]);
   }
-
-  detector.detect(video, gotDetections);
 }
 
 
 
 function draw() {
+    detector.detect(video, gotDetections);
   image(video.get(), 0, 0);
 
   let redboxes = 0;

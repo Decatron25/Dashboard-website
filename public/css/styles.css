@@ -12,12 +12,26 @@ canvas {
   margin-top: 100px;
 
 }
+#video2 {
+  margin-top: 100px;
+  margin-left:10px;
+}
 
+
+img{
+  width: 50%;
+  height: auto;
+}
 h1{
   margin-right: 200px;
 }
-#mask-image{
-  align-items: center;
-  margin-left: 200px;
+iframe {
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 50px;
+    scrolling: auto;
+}
+#mask-image {
   margin-top: 100px;
+  margin-left: 200px;
 }

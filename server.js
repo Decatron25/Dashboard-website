@@ -79,7 +79,7 @@ app.post("/cctv1.html", function(req, res) {
 
   frame.save(function(err, docs) {
     if(!err) {
-      //console.log(docs);
+      console.log(docs);
     }
   });
   res.sendStatus(200);
@@ -122,7 +122,7 @@ app.post("/cctv4.html", function(req, res) {
 
   frame.save(function(err, docs) {
     if(!err) {
-      //console.log(docs);
+      console.log(docs);
     }
   });
   res.sendStatus(200);
