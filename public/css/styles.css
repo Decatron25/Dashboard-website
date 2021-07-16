@@ -14,7 +14,7 @@ canvas {
 }
 #video2 {
   margin-top: 100px;
-  margin-left:10px;
+  margin-left:200px;
 }
 
 
@@ -34,4 +34,19 @@ iframe {
 #mask-image {
   margin-top: 100px;
   margin-left: 200px;
+}
+#output1{
+  margin-top: 400px;
+}
+#output2{
+  margin-top: 400px;
+}
+#output3{
+  margin-top: 400px;
+}
+#output4{
+  margin-top: 400px;
+}
+.btn{
+  margin-left: 800px;
 }
