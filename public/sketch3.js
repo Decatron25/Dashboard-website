@@ -14,13 +14,19 @@ function setup() {
 
   let canvas = createCanvas(1280,720);
   canvas.parent('video3');
-  background(128, 0, 128);
+  background(48,200,225);
   video.volume(0);
   video.size();
   video.loop();
   video.hide();
 
   detector.detect(video, gotDetections);
+}
+
+function grabScreen(){
+  const img = new Image()
+  img.src = canvas.toDataURL();
+  $("#output3").prepend(img);
 }
 
 function gotDetections(error, results) {
@@ -73,6 +79,10 @@ function draw() {
 
     if (isRed) {
       redboxes++;
+      if(redboxes>2)
+      {
+        grabScreen();
+      }
       stroke(255, 0, 0);
     } else {
       stroke(0, 255, 0);
