@@ -37,7 +37,7 @@ function gotDetections(error, results) {
 }
 
 function grabScreen(){
-  const img = new Image()
+  const img = new Image();
   img.src = canvas.toDataURL();
   $("#output1").prepend(img);
 }
