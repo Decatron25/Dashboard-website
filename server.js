@@ -7,11 +7,12 @@ const mongoose = require('mongoose');
 app.use(express.static('public'));
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://Vchirag:nis75nis@cluster0.eu7bd.mongodb.net/frameDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://trainee06:decatron25@cluster0.eeete.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const frameSchema = new mongoose.Schema ({
   PeopleCount: Number,
-  violations: Number
+  violations: Number,
+  threshold: Number
 },
 {
   timestamps: true
@@ -74,7 +75,8 @@ app.get("/facemask.html", (req,res) => {
 app.post("/cctv1.html", function(req, res) {
   const frame = new Frame1({
     PeopleCount: req.body.count,
-    violations: req.body.violations
+    violations: req.body.violations,
+    threshold: 3
   });
 
   frame.save(function(err, docs) {
@@ -88,7 +90,8 @@ app.post("/cctv1.html", function(req, res) {
 app.post("/cctv2.html", function(req, res) {
   const frame = new Frame2({
     PeopleCount: req.body.count,
-    violations: req.body.violations
+    violations: req.body.violations,
+    threshold: 5
   });
 
   frame.save(function(err, docs) {
@@ -102,7 +105,8 @@ app.post("/cctv2.html", function(req, res) {
 app.post("/cctv3.html", function(req, res) {
   const frame = new Frame3({
     PeopleCount: req.body.count,
-    violations: req.body.violations
+    violations: req.body.violations,
+    threshold: 3
   });
 
   frame.save(function(err, docs) {
@@ -117,7 +121,8 @@ app.post("/cctv4.html", function(req, res) {
   const frame = new Frame4({
 
     PeopleCount: req.body.count,
-    violations: req.body.violations
+    violations: req.body.violations,
+    threshold: 10
   });
 
   frame.save(function(err, docs) {
