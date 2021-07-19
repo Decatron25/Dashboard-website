@@ -36,17 +36,22 @@ iframe {
   margin-left: 200px;
 }
 #output1{
-  margin-top: 400px;
+  margin-top: 200px;
 }
 #output2{
-  margin-top: 400px;
+  margin-top: 200px;
 }
 #output3{
-  margin-top: 400px;
+  margin-top: 200px;
 }
 #output4{
-  margin-top: 400px;
+  margin-top: 200px;
 }
 .btn{
   margin-left: 800px;
+}
+.cctv{
+  margin-top: 300px;
+  text-align: center;
+  color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 300px; margin: 0;
 }
