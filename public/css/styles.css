@@ -4,54 +4,78 @@ body {
   overflow: hidden;
   align-items: center;
 }
+
 canvas {
-  margin:auto;
+  margin: auto;
 }
+
 #video1 {
-  margin-left: 200px;
-  margin-top: 100px;
-
+  margin-top: 150px;
+  text-align: center;
 }
+
 #video2 {
-  margin-top: 100px;
-  margin-left:200px;
+  margin-top: 150px;
+  text-align: center;
 }
 
+#video3 {
+  margin-top: 150px;
+  text-align: center;
+}
 
-img{
+#video4 {
+  margin-top: 150px;
+  text-align: center;
+}
+
+img {
   width: 50%;
   height: auto;
 }
-h1{
+
+h1 {
   margin-right: 200px;
 }
+
 iframe {
-    border: 1px solid black;
-    width: 100%;
-    margin-top: 50px;
-    scrolling: auto;
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 50px;
+  scrolling: auto;
 }
+
 #mask-image {
   margin-top: 100px;
   margin-left: 200px;
 }
-#output1{
-  margin-top: 200px;
+
+#output1 {
+  margin-top: 100px;
 }
-#output2{
-  margin-top: 200px;
+
+#output2 {
+  margin-top: 100px;
 }
-#output3{
-  margin-top: 200px;
+
+#output3 {
+  margin-top: 100px;
 }
-#output4{
-  margin-top: 200px;
+
+#output4 {
+  margin-top: 100px;
 }
-.btn{
+
+.btn {
   margin-left: 800px;
 }
-.cctv{
-  margin-top: 300px;
+
+.cctv {
   text-align: center;
-  color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 300px; margin: 0;
+  color: #7c795d;
+  font-family: 'Trocchi', serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 200px;
+  margin: 0;
 }

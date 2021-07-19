@@ -23,7 +23,7 @@ function setup() {
     "method": "POST",
     "headers": {
       "content-type": "application/x-www-form-urlencoded",
-      "x-rapidapi-key": "98ee9e1920mshcc9fd03d01eeee4p12665djsnbad44e92853a",
+      "x-rapidapi-key": "4cd19ad7d4msh97ac21879f1dab7p16c261jsn8031965b80d0",
       "x-rapidapi-host": "face-mask-detection.p.rapidapi.com"
     },
     "data": {
